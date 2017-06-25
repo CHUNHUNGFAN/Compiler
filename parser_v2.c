@@ -53,6 +53,15 @@ void error(const char msg[]) {
 *rel-R -> '<' add rel-R
 *rel-R -> "<=" add rel-R
 *rel-R -> ε
+*add -> term add-R
+*add-R -> + term add-R
+*add-R -> ε
+*term -> factor term-R
+*term-R -> * factor term-R
+*term-R -> ε
+*factor -> (expr)
+*factor -> num
+*factor -> id
 */
 
 
